@@ -1,10 +1,10 @@
 ﻿namespace BibliotecaELM.Domain.Entities;
 public class Endereco
 {
-    public long id_endereco { get; private set; }
-    public int cep { get; private set; }
-    public string estado { get; private set; }
-    public string cidade { get; private set; }
-    public string bairro { get; private set; }
-    public string rua { get; private set; }
+    public long IdEndereco { get; private set; }
+    public int Cep { get; private set; }
+    public string Estado { get; private set; }
+    public string Cidade { get; private set; }
+    public string Bairro { get; private set; }
+    public string Rua { get; private set; }
 }

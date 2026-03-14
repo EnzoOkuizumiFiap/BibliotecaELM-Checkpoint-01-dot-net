@@ -2,9 +2,9 @@
 
 public class Emprestimo
 {
-    public long id_emprestimo { get; private set; }
-    public DateTime data_emprestimo { get; private set; }
-    public DateTime data_devolucao { get; private set; }
-    public long id_user { get; private set; }
-    public long id_livro { get; private set; }
+    public long idEmprestimo { get; private set; }
+    public DateTime dataEmprestimo { get; private set; }
+    public DateTime dataDevolucao { get; private set; }
+    public long idUser { get; private set; }
+    public long idLivro { get; private set; }
 }

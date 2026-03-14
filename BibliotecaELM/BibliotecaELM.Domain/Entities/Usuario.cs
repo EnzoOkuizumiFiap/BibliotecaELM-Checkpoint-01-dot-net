@@ -4,21 +4,21 @@ namespace BibliotecaELM.Domain.Entities;
 
 public class Usuario : BaseEntity
 {
-    public string nome_user { get; private set; }
-    public DateOnly data_user { get; private set; }
-    public string email { get; private set; }
-    public string cpf { get; private set; }
+    public string NomeUser { get; private set; }
+    public DateOnly DataUser { get; private set; }
+    public string Email { get; private set; }
+    public string Cpf { get; private set; }
     
-    public List<Emprestimo> emprestimos { get; private set; }
-    public Endereco endereco { get; private set; }
-    public List<Compra> compras { get; private set; }
-    public List<Livro> livros { get; private set; }
+    public List<Emprestimo> Emprestimos { get; private set; }
+    public Endereco Endereco { get; private set; }
+    public List<Compra> Compras { get; private set; }
+    public List<Livro> Livros { get; private set; }
     
-    public Usuario(string nome_user, DateOnly data_user, string email, string cpf)
+    public Usuario(string nomeUser, DateOnly dataUser, string email, string cpf)
     {
-        UpdateName(nome_user);
+        UpdateName(nomeUser);
         UpdateEmail(email);
-        SetBirthDate(data_user);
+        SetBirthDate(dataUser);
         ValidateCpf(cpf);
     }
     
@@ -27,7 +27,7 @@ public class Usuario : BaseEntity
         if (string.IsNullOrWhiteSpace(newName))
             throw new Exception("Nome não pode ser vazio.");
         
-        nome_user = newName;
+        NomeUser = newName;
     }
 
     public void UpdateEmail(string newEmail)
@@ -35,7 +35,7 @@ public class Usuario : BaseEntity
         if (string.IsNullOrWhiteSpace(newEmail) || !newEmail.Contains("@"))
             throw new Exception("E-mail inválido.");
             
-        email = newEmail;
+        Email = newEmail;
     }
     
     public void SetBirthDate(DateOnly newDate)
@@ -45,7 +45,7 @@ public class Usuario : BaseEntity
         if (age > 10 && age < 100)
             throw new Exception("Insira um valor válido.");
 
-        data_user = newDate;
+        DataUser = newDate;
     }
     
     private static int CalculateAge(DateOnly date)
@@ -60,7 +60,7 @@ public class Usuario : BaseEntity
     {
         if (cpf.Length == 11)
         {
-            this.cpf = cpf;
+            this.Cpf = cpf;
         }
         else
         {

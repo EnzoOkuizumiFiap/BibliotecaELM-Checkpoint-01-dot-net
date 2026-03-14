@@ -2,15 +2,14 @@
 
 public class Compra
 {
-    public string forma_compra { get; private set; }
-    public DateOnly data_compra { get; private set; }
-    
+    public string FormaCompra { get; private set; }
+    public DateOnly DataCompra { get; private set; }
     public Usuario Usuario { get; private set; }
 
-    public Compra(string forma_compra, DateOnly data_compra, Usuario usuario)
+    public Compra(string formaCompra, DateOnly dataCompra, Usuario usuario)
     {
-        validateFormaCompra(forma_compra);
-        validateDataCompra(data_compra);
+        validateFormaCompra(formaCompra);
+        validateDataCompra(dataCompra);
         this.Usuario = usuario;
     }
 
@@ -19,7 +18,7 @@ public class Compra
         if (forma.ToLower() == "debito" || forma.ToLower() == "credito" || forma.ToLower() == "dinheiro" ||
             forma.ToLower() == "pix")
         {
-            forma_compra = forma;
+            FormaCompra = forma;
         }
         else
         {
@@ -31,11 +30,11 @@ public class Compra
     {
         if (data.Year < 1900 && data.Year > DateTime.Now.Year)
         {
-            throw new Exception("Insira um valor valido.");
+            throw new Exception("Insira uma data válida.");
         }
         else
         {
-            data_compra = data;
+            DataCompra = data;
         }
     }
 }

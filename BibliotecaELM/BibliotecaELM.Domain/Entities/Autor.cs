@@ -5,12 +5,14 @@ namespace BibliotecaELM.Domain.Entities;
 
 public class Autor : BaseEntity
 {
-    public string nome_autor { get; private set; }
-    public DateOnly nascimento { get; private set; }
-
-    public Autor(string nome, DateOnly nascimento)
+    public string NomeAutor { get; private set; }
+    public string descricao { get; private set; }
+    public DateOnly Nascimento { get; private set; }
+    
+    public Autor(string nome, string descricao, DateOnly nascimento)
     {
-        this.nome_autor = nome;
+        this.NomeAutor = nome;
+        this.descricao = descricao;
         ValidateLancamento(nascimento);
     }
 
@@ -18,11 +20,11 @@ public class Autor : BaseEntity
     {
         if (data.Year < 2015)
         {
-            nascimento = data;
+            Nascimento = data;
         }
         else
         {
-            throw new Exception("insira um valor válido.");
+            throw new Exception("Insira um valor válido.");
         }
     }
 }
