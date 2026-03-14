@@ -12,7 +12,6 @@ public class Usuario : BaseEntity
     // Propriedades de navegação
     public List<Emprestimo> Emprestimos { get; private set; } = new List<Emprestimo>();
     public List<Compra> Compras { get; private set; } = new List<Compra>();
-    public List<Livro> Livros { get; private set; } = new List<Livro>();
     public Endereco? Endereco { get; private set; }
     
     public Usuario(string nome, DateOnly nascimento, string email, string cpf)

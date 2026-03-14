@@ -36,6 +36,16 @@
             "related": ".pdb;.xml"
           }
         }
+      },
+      "BibliotecaELM.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/BibliotecaELM.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BibliotecaELM.Domain.dll": {}
+        }
       }
     }
   },
@@ -75,10 +85,16 @@
         "microsoft.openapi.2.0.0.nupkg.sha512",
         "microsoft.openapi.nuspec"
       ]
+    },
+    "BibliotecaELM.Domain/1.0.0": {
+      "type": "project",
+      "path": "../BibliotecaELM.Domain/BibliotecaELM.Domain.csproj",
+      "msbuildProject": "../BibliotecaELM.Domain/BibliotecaELM.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "BibliotecaELM.Domain >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 10.0.4"
     ]
   },
@@ -106,7 +122,11 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Enzo\\new_backup\\FIAP\\Advanced Business Development with .NET\\BibliotecaELM-Checkpoint-01-dot-net\\BibliotecaELM\\BibliotecaELM.Domain\\BibliotecaELM.Domain.csproj": {
+              "projectPath": "C:\\Users\\Enzo\\new_backup\\FIAP\\Advanced Business Development with .NET\\BibliotecaELM-Checkpoint-01-dot-net\\BibliotecaELM\\BibliotecaELM.Domain\\BibliotecaELM.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

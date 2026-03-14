@@ -10,9 +10,8 @@ public class Emprestimo : BaseEntity
     // Propriedades de navegação
     public Usuario Usuario { get; private set; }
     public Livro Livro { get; private set; }
-    public Endereco Endereco { get; private set; }
     
-    public Emprestimo(DateTime dataEmprestimo, DateTime dataDevolucao, Usuario usuario, Livro livro, Endereco endereco)
+    public Emprestimo(DateTime dataEmprestimo, DateTime dataDevolucao, Usuario usuario, Livro livro)
     {
         if (dataDevolucao < dataEmprestimo) throw new ArgumentException("A data de devolução não pode ser anterior à data de empréstimo.");
         DataEmprestimo = dataEmprestimo;
@@ -20,6 +19,5 @@ public class Emprestimo : BaseEntity
         
         Usuario = usuario ?? throw new ArgumentNullException(nameof(usuario), "O usuário não pode ser nulo.");
         Livro = livro ?? throw new ArgumentNullException(nameof(livro), "O livro não pode ser nulo.");
-        Endereco = endereco ?? throw new ArgumentNullException(nameof(endereco), "O endereço não pode ser nulo.");
     }
 }
