@@ -4,40 +4,22 @@ namespace BibliotecaELM.Domain.Entities;
 
 public class Livro: BaseEntity
 {
-    public string nomeLivro { get; private set; }
+    public string NomeLivro { get; private set; }
     public decimal Preco { get; private set; }
     public DateOnly Lancamento { get; private set; }
     public Autor Autor { get; private set; }
 
-    public Livro(string nome_livro, decimal preco, DateOnly lancamento, Autor autor)
+    public Livro(string nomeLivro, decimal preco, DateOnly lancamento, Autor autor)
     {
-        this.nomeLivro = nome_livro;
-        validatePreco(preco);
-        validateLancamento(lancamento);
-        this.Autor = autor;
-    }
-    
-    public void validatePreco(decimal valor)
-    {
-        if (valor > 0 && valor < 10000)
-        {
-            Preco = valor;
-        }
-        else
-        {
-            throw new Exception("Insira um valor valido");
-        }
-    }
-
-    public void validateLancamento(DateOnly data)
-    {
-        if (data.Year < 2024)
-        {
-            Lancamento = data;
-        }
-        else
-        {
-            throw new Exception("Insira uma data valida");
-        }
+        if(string.IsNullOrWhiteSpace(nomeLivro)) throw new ArgumentException("O nome do livro não pode ser vazio.", nameof(nomeLivro));
+        this.NomeLivro = nomeLivro;
+        
+        if(preco is <= 0 or >= 10000) throw new ArgumentOutOfRangeException(nameof(preco), "O preço deve ser maior que 0 e menor que 10000.");
+        this.Preco = preco;
+        
+        if (lancamento.Year > DateTime.Now.Year) throw new ArgumentException("O ano de lançamento não pode ser uma data no futuro.", nameof(lancamento));
+        this.Lancamento = lancamento;
+        
+        this.Autor = autor ?? throw new ArgumentNullException(nameof(autor), "O autor não pode ser nulo.");
     }
 }

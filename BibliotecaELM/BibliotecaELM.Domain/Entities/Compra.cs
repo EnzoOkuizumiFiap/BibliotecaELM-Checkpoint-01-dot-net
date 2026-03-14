@@ -1,40 +1,30 @@
-﻿namespace BibliotecaELM.Domain.Entities;
+﻿using BibliotecaELM.Domain.Common;
 
-public class Compra
+namespace BibliotecaELM.Domain.Entities;
+
+public class Compra : BaseEntity
 {
     public string FormaCompra { get; private set; }
     public DateOnly DataCompra { get; private set; }
+    
+    // Propriedades de navegação
     public Usuario Usuario { get; private set; }
+    public Livro Livro { get; private set; }
 
-    public Compra(string formaCompra, DateOnly dataCompra, Usuario usuario)
+    public Compra(string formaCompra, DateOnly dataCompra, Usuario usuario, Livro livro)
     {
-        validateFormaCompra(formaCompra);
-        validateDataCompra(dataCompra);
-        this.Usuario = usuario;
-    }
-
-    public void validateFormaCompra(string forma)
-    {
-        if (forma.ToLower() == "debito" || forma.ToLower() == "credito" || forma.ToLower() == "dinheiro" ||
-            forma.ToLower() == "pix")
-        {
-            FormaCompra = forma;
-        }
-        else
-        {
-            throw new Exception("Insira um valor válido.");
-        }
-    }
-
-    public void validateDataCompra(DateOnly data)
-    {
-        if (data.Year < 1900 && data.Year > DateTime.Now.Year)
-        {
-            throw new Exception("Insira uma data válida.");
-        }
-        else
-        {
-            DataCompra = data;
-        }
+        if (string.IsNullOrWhiteSpace(formaCompra) || 
+            !(formaCompra.Equals("débito", StringComparison.CurrentCultureIgnoreCase) || 
+              formaCompra.Equals("crédito", StringComparison.CurrentCultureIgnoreCase) || 
+              formaCompra.Equals("dinheiro", StringComparison.CurrentCultureIgnoreCase) || 
+              formaCompra.Equals("pix", StringComparison.CurrentCultureIgnoreCase))) 
+            throw new ArgumentException("Forma de pagamento inválida. Use: débito, crédito, dinheiro ou pix.", nameof(formaCompra)); 
+        this.FormaCompra = formaCompra;
+        
+        if (dataCompra.Year < 1900 || dataCompra.Year > DateTime.Now.Year) throw new ArgumentOutOfRangeException(nameof(dataCompra), "A data de compra não pode ser anterior a 1900 ou no futuro.");
+        this.DataCompra = dataCompra;
+        
+        this.Usuario = usuario ?? throw new ArgumentNullException(nameof(usuario), "O usuário não pode ser nulo.");
+        this.Livro = livro ?? throw new ArgumentNullException(nameof(livro), "O livro não pode ser nulo.");
     }
 }
