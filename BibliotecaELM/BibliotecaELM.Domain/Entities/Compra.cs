@@ -9,9 +9,9 @@ public class Compra : BaseEntity
     
     // Propriedades de navegação
     public Usuario Usuario { get; private set; }
-    public Livro Livro { get; private set; }
+    public List<Livro> Livros { get; private set; } = new List<Livro>();
 
-    public Compra(string formaCompra, DateOnly dataCompra, Usuario usuario, Livro livro)
+    public Compra(string formaCompra, DateOnly dataCompra, Usuario usuario)
     {
         if (string.IsNullOrWhiteSpace(formaCompra) || 
             !(formaCompra.Equals("débito", StringComparison.CurrentCultureIgnoreCase) || 
@@ -25,6 +25,5 @@ public class Compra : BaseEntity
         this.DataCompra = dataCompra;
         
         this.Usuario = usuario ?? throw new ArgumentNullException(nameof(usuario), "O usuário não pode ser nulo.");
-        this.Livro = livro ?? throw new ArgumentNullException(nameof(livro), "O livro não pode ser nulo.");
     }
 }
