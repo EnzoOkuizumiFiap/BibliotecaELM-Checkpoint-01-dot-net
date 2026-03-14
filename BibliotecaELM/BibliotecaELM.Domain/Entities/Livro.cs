@@ -2,9 +2,9 @@
 
 public class Livro
 {
-    private long id_livro;
-    private string nome_livro;
-    private decimal preco;
-    private DateTime lancamento;
-    private long id_autor;
+    public long id_livro { get; private set; }
+    public string nome_livro { get; private set; }
+    public decimal preco { get; private set; }
+    public DateTime lancamento { get; private set; }
+    public long id_autor { get; private set; }
 }

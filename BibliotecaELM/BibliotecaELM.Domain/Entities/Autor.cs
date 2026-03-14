@@ -1,8 +1,10 @@
-﻿namespace BibliotecaELM.Domain.Entities;
+﻿using System.Net.Mime;
+
+namespace BibliotecaELM.Domain.Entities;
 
 public class Autor
 {
-    private long id_autor;
-    private string nome_autor;
-    private DateTime nascimento;
+    public long id_autor { get; private set; }
+    public string nome_autor { get; private set; }
+    public DateTime nascimento { get; private set; }
 }

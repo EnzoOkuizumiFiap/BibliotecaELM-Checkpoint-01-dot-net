@@ -2,8 +2,8 @@
 
 public class Compra
 {
-    private long id_compra;
-    private string forma_compra;
-    private DateTime data_compra;
-    private long id_user;
+    public long id_compra  { get; private set; }
+    public string forma_compra { get; private set; }
+    public DateTime data_compra { get; private set; }
+    public long id_user { get; private set; }
 }
