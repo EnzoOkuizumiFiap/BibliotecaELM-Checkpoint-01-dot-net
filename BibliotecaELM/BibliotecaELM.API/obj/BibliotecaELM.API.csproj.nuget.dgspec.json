@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Enzo\\new_backup\\FIAP\\Advanced Business Development with .NET\\C-sharp-aulas\\BibliotecaELM\\BibliotecaELM.API\\BibliotecaELM.API.csproj": {}
+    "C:\\Users\\Enzo\\new_backup\\FIAP\\Advanced Business Development with .NET\\BibliotecaELM-Checkpoint-01-dot-net\\BibliotecaELM\\BibliotecaELM.API\\BibliotecaELM.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Enzo\\new_backup\\FIAP\\Advanced Business Development with .NET\\C-sharp-aulas\\BibliotecaELM\\BibliotecaELM.API\\BibliotecaELM.API.csproj": {
+    "C:\\Users\\Enzo\\new_backup\\FIAP\\Advanced Business Development with .NET\\BibliotecaELM-Checkpoint-01-dot-net\\BibliotecaELM\\BibliotecaELM.API\\BibliotecaELM.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Enzo\\new_backup\\FIAP\\Advanced Business Development with .NET\\C-sharp-aulas\\BibliotecaELM\\BibliotecaELM.API\\BibliotecaELM.API.csproj",
+        "projectUniqueName": "C:\\Users\\Enzo\\new_backup\\FIAP\\Advanced Business Development with .NET\\BibliotecaELM-Checkpoint-01-dot-net\\BibliotecaELM\\BibliotecaELM.API\\BibliotecaELM.API.csproj",
         "projectName": "BibliotecaELM.API",
-        "projectPath": "C:\\Users\\Enzo\\new_backup\\FIAP\\Advanced Business Development with .NET\\C-sharp-aulas\\BibliotecaELM\\BibliotecaELM.API\\BibliotecaELM.API.csproj",
+        "projectPath": "C:\\Users\\Enzo\\new_backup\\FIAP\\Advanced Business Development with .NET\\BibliotecaELM-Checkpoint-01-dot-net\\BibliotecaELM\\BibliotecaELM.API\\BibliotecaELM.API.csproj",
         "packagesPath": "C:\\Users\\Enzo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Enzo\\new_backup\\FIAP\\Advanced Business Development with .NET\\C-sharp-aulas\\BibliotecaELM\\BibliotecaELM.API\\obj\\",
+        "outputPath": "C:\\Users\\Enzo\\new_backup\\FIAP\\Advanced Business Development with .NET\\BibliotecaELM-Checkpoint-01-dot-net\\BibliotecaELM\\BibliotecaELM.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Enzo\\AppData\\Roaming\\NuGet\\NuGet.Config"
