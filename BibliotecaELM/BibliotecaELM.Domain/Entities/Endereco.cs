@@ -8,6 +8,7 @@ public class Endereco : BaseEntity
     public string Cidade { get; private set; }
     public string Bairro { get; private set; }
     public string Rua { get; private set; }
+    public Usuario Usuario { get; private set; }
     
     public Endereco(string cep, string estado, string cidade, string bairro, string rua)
     {

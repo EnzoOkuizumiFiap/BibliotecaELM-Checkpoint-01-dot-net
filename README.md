@@ -1,18 +1,16 @@
-# 📚 BibliotecaELM - Checkpoint 01
+# BibliotecaELM - Checkpoint 01
 
-Projeto WebAPI em .NET 10 seguindo princípios de Clean Architecture.
-
-Este projeto foi desenvolvido como parte do **Checkpoint 01 (CP1)**, focado exclusivamente na elaboração do **Modelo Entidade-Relacionamento (MER)** e na **modelagem das Entidades de Domínio utilizando C#** (sem implementação de banco de dados, CRUD, controllers ou endpoints).
+Este projeto foi desenvolvido como parte do **Checkpoint 01 (CP1)**, focado exclusivamente na elaboração do **Modelo Entidade-Relacionamento (MER)** e na **modelagem das Entidades de Domínio utilizando C#**
 
 ---
 
-## 🏢 O Domínio Escolhido
+## Domínio Escolhido
 
 O domínio escolhido para este projeto é o de uma **Biblioteca**, que abrange não apenas o serviço clássico de **empréstimos de acervo**, mas também a **gestão de compras e aquisição de livros pelos usuários**.
 
 ---
 
-## 📦 Entidades Modeladas
+## Entidades Modeladas
 
 As seguintes entidades principais foram identificadas e modeladas no código seguindo a camada de **Domínio (`BibliotecaELM.Domain/Entities`)**:
 
@@ -27,12 +25,12 @@ Todas as entidades herdam de uma **classe abstrata `BaseEntity`**, estabelecendo
 
 ---
 
-## 🔗 Resumo dos Relacionamentos
+## Resumo dos Relacionamentos
 
 Baseado na modelagem construída no código, estabelecemos as seguintes **cardinalidades e opcionalidades**:
 
-- **Usuario (1) ↔ (1) Endereco**  
-  Relacionamento **1:1 obrigatório**. Todo usuário precisa possuir um endereço associado.
+- **Usuario (1) ↔ (N) Endereco**  
+  Relacionamento **1:N obrigatório**. Todo usuário precisa possuir um endereço associado.
 
 - **Usuario (1) ↔ (N) Emprestimo**  
   Relacionamento **1:N**. Um único usuário pode ter o histórico de vários empréstimos.  
@@ -53,15 +51,15 @@ Baseado na modelagem construída no código, estabelecemos as seguintes **cardin
 
 ---
 
-## 🗺️ Modelo Entidade-Relacionamento (MER)
+## Modelo Entidade-Relacionamento (MER)
 
 O diagrama de **Entidade-Relacionamento** correspondente a essa modelagem de domínio encontra-se no arquivo abaixo:
 
-*(Caso a imagem não seja renderizada, verifique os arquivos em `/docs/mer.png` ou `/docs/mer.pdf`)*
+![Imagem - MER](docs/mer.jpeg)
 
 ---
 
-## 👥 Integrantes da Equipe (Autores e Créditos)
+## Integrantes da Equipe
 
 <table>
 <tr>
