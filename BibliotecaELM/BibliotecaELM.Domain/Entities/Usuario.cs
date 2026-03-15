@@ -9,7 +9,6 @@ public class Usuario : BaseEntity
     public string Email { get; private set; }
     public string Cpf { get; private set; }
     
-    // Propriedades de navegação
     public ICollection<Emprestimo> Emprestimos { get; private set; } = new List<Emprestimo>();
     public ICollection<Compra> Compras { get; private set; } = new List<Compra>();
     public ICollection<Endereco> Enderecos { get; private set; }

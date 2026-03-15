@@ -10,7 +10,7 @@ public class Endereco : BaseEntity
     public string Rua { get; private set; }
     public Usuario Usuario { get; private set; }
     
-    public Endereco(string cep, string estado, string cidade, string bairro, string rua)
+    public Endereco(string cep, string estado, string cidade, string bairro, string rua, Usuario usuario)
     {
         if (string.IsNullOrWhiteSpace(cep)) throw new ArgumentException("O CEP não pode ser nulo ou vazio.", nameof(cep));
         this.Cep = cep;
@@ -26,5 +26,7 @@ public class Endereco : BaseEntity
 
         if (string.IsNullOrWhiteSpace(rua)) throw new ArgumentException("A rua não pode ser nula ou vazia.", nameof(rua));
         this.Rua = rua;
+        
+        this.Usuario = usuario ?? throw new ArgumentNullException(nameof(usuario), "O endereço deve pertencer a um usuário.");
     }
 }

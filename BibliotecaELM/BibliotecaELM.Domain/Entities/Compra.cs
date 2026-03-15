@@ -8,7 +8,6 @@ public class Compra : BaseEntity
     public FormaCompraEnum FormaCompra { get; private set; }
     public DateTime DataCompra { get; private set; }
     
-    // Propriedades de navegação
     public Usuario Usuario { get; private set; }
     public ICollection<Livro> Livros { get; private set; }
 

@@ -7,7 +7,6 @@ public class Emprestimo : BaseEntity
     public DateTime DataEmprestimo { get; private set; }
     public DateTime DataDevolucao { get; private set; }
     
-    // Propriedades de navegação
     public Usuario Usuario { get; private set; }
     public ICollection<Livro> Livros { get; private set; }
     
