@@ -5,11 +5,13 @@ namespace BibliotecaELM.Domain.Entities;
 public class Livro: BaseEntity
 {
     public string NomeLivro { get; private set; }
-    public decimal Preco { get; private set; }
+    public double Preco { get; private set; }
     public DateOnly DataLancamento { get; private set; }
+    
+    // Propriedades de navegação
     public Autor Autor { get; private set; }
 
-    public Livro(string nomeLivro, decimal preco, DateOnly dataLancamento, Autor autor)
+    public Livro(string nomeLivro, double preco, DateOnly dataLancamento, Autor autor)
     {
         if(string.IsNullOrWhiteSpace(nomeLivro)) throw new ArgumentException("O nome do livro não pode ser vazio.", nameof(nomeLivro));
         this.NomeLivro = nomeLivro;
