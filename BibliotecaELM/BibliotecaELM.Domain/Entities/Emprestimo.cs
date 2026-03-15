@@ -19,7 +19,7 @@ public class Emprestimo : BaseEntity
         
         this.Usuario = usuario ?? throw new ArgumentNullException(nameof(usuario), "O usuário não pode ser nulo.");
         
-        if (livros == null || livros.Count == 0) throw new ArgumentException("A compra deve possuir ao menos um livro.", nameof(livros));
+        if (livros == null || livros.Count == 0) throw new ArgumentException("O empréstimo deve possuir ao menos um livro.", nameof(livros));
         this.Livros = livros;
     }
 }
