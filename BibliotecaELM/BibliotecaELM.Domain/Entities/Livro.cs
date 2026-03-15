@@ -12,8 +12,8 @@ public class Livro: BaseEntity
     public Autor Autor { get; private set; }
     
     // Compras e emprestimos relacionados.
-    public ICollection<Compra> Compras { get; set; } = new List<Compra>();
-    public ICollection<Emprestimo> Emprestimos { get; set; } = new List<Emprestimo>();
+    public ICollection<Compra> Compras { get; private set; } = new List<Compra>();
+    public ICollection<Emprestimo> Emprestimos { get; private set; } = new List<Emprestimo>();
 
     public Livro(string nomeLivro, double preco, DateOnly dataLancamento, Autor autor)
     {
