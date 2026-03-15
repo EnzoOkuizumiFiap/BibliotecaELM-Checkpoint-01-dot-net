@@ -1,5 +1,5 @@
 ﻿using BibliotecaELM.Domain.Common;
-using Recomenda.Domain.Enums;
+using BibliotecaELM.Domain.Enums;
 
 namespace BibliotecaELM.Domain.Entities;
 

@@ -1,4 +1,4 @@
-﻿namespace Recomenda.Domain.Enums;
+﻿namespace BibliotecaELM.Domain.Enums;
 
 public enum FormaCompraEnum
 {
