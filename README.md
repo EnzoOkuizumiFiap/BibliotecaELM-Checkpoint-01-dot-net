@@ -40,13 +40,13 @@ Baseado na modelagem construída no código, estabelecemos as seguintes **cardin
   Relacionamento **1:N**. Um usuário pode efetuar inúmeras compras.  
   Cada compra pertence restritamente a um **usuário obrigatório**.
 
-- **Livro (1) ↔ (N) Emprestimo**  
-  Relacionamento **1:N**. Um mesmo livro (obra) pode aparecer em inúmeros registros de empréstimos ao longo do tempo.
+- **Livro (N) ↔ (N) Emprestimo**  
+  Relacionamento **N:N**. Um ou mais livros (obras) podem aparecer em inúmeros registros de empréstimos ao longo do tempo.
 
 - **Autor (1) ↔ (N) Livro**  
   Relacionamento **1:N**. Um autor compôs **um ou múltiplos livros** cadastrados no acervo da biblioteca.
 
-- **Compra (1) ↔ (N) Livro**  
+- **Compra (N) ↔ (N) Livro**  
   Relacionamento modelado como **listas de agregação** (onde uma **Compra engloba uma coleção de Livros**).
 
 ---
