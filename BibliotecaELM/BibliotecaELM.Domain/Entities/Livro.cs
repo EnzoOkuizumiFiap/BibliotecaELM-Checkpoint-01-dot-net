@@ -10,8 +10,9 @@ public class Livro: BaseEntity
     
     // Propriedades de navegação
     public Autor Autor { get; private set; }
-    public List<LivroCompra> LivroCompras { get; private set; } = new();
-    public List<LivroEmprestimo> LivroEmprestimos { get; private set; } = new();
+    
+    public ICollection<Compra> Compras { get; set; } = new List<Compra>();
+    public ICollection<Emprestimo> Emprestimos { get; set; } = new List<Emprestimo>();
 
     public Livro(string nomeLivro, double preco, DateOnly dataLancamento, Autor autor)
     {
