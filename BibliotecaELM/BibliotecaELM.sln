@@ -6,6 +6,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{629F7ADC-CC3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaELM.Domain", "BibliotecaELM.Domain\BibliotecaELM.Domain.csproj", "{12D7954B-8A95-4D41-A88E-13EAC8A0AD3D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaELM.Application", "BibliotecaELM.Application\BibliotecaELM.Application.csproj", "{9C6D4DCF-7CE9-4571-8C47-E19079232EF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotecaELM.Infrastructure", "BibliotecaELM.Infrastructure\BibliotecaELM.Infrastructure.csproj", "{1788AC80-5A65-4002-9E02-8EA485E19014}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,9 +24,19 @@ Global
 		{12D7954B-8A95-4D41-A88E-13EAC8A0AD3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12D7954B-8A95-4D41-A88E-13EAC8A0AD3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12D7954B-8A95-4D41-A88E-13EAC8A0AD3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C6D4DCF-7CE9-4571-8C47-E19079232EF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C6D4DCF-7CE9-4571-8C47-E19079232EF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C6D4DCF-7CE9-4571-8C47-E19079232EF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C6D4DCF-7CE9-4571-8C47-E19079232EF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1788AC80-5A65-4002-9E02-8EA485E19014}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1788AC80-5A65-4002-9E02-8EA485E19014}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1788AC80-5A65-4002-9E02-8EA485E19014}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1788AC80-5A65-4002-9E02-8EA485E19014}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D516A993-50A6-4DC7-8A39-37656482D44F} = {629F7ADC-CC3C-467E-B76C-366843E7CD2F}
 		{12D7954B-8A95-4D41-A88E-13EAC8A0AD3D} = {629F7ADC-CC3C-467E-B76C-366843E7CD2F}
+		{9C6D4DCF-7CE9-4571-8C47-E19079232EF0} = {629F7ADC-CC3C-467E-B76C-366843E7CD2F}
+		{1788AC80-5A65-4002-9E02-8EA485E19014} = {629F7ADC-CC3C-467E-B76C-366843E7CD2F}
 	EndGlobalSection
 EndGlobal
